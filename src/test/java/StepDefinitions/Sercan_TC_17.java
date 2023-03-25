@@ -3,11 +3,10 @@ import Pages.NurPOMPage;
 import UtilityPacage.BasicDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Sercan_TC_17 {
-
-
 
 
 
@@ -32,10 +31,17 @@ public class Sercan_TC_17 {
             elements.clickMethod(elements.getCheckBox());
         }
 
-        @And("Check entering simple {password}")
+        @And("Check entering simple {string}")
         public void checkEnteringSimple(String password) {
             elements.sendKeysMethod(elements.getPasswordButton(),password);
             elements.sendKeysMethod(elements.getConfirmPasswordButton(), password);
+
+        }
+
+        @And("Click on the Continue button")
+        public void clickOnTheContinueButton(){
+
+            elements.clickMethod(elements.getContinueButton());
 
         }
     }
